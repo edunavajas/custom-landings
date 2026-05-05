@@ -1,0 +1,264 @@
+---
+// ScrollVideoHero.astro
+---
+
+<section
+  id="hero"
+  class="scroll-hero-container"
+  aria-label="KeyForge hero — scroll to assemble the keyboard"
+>
+  <div class="scroll-hero-sticky">
+
+    <video
+      id="hero-video"
+      src="/videos/keyboard-seekable.mp4"
+      muted
+      playsinline
+      preload="auto"
+      aria-hidden="true"
+    ></video>
+
+    <div class="hero-overlay-bottom" aria-hidden="true"></div>
+    <div class="hero-overlay-top"    aria-hidden="true"></div>
+    <div class="hero-overlay-left"   aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <header class="hero-brand" role="banner">
+        <span class="brand-logotype font-mono text-accent" aria-label="KeyForge">KF</span>
+        <span class="brand-name font-mono">KeyForge</span>
+      </header>
+
+      <div class="hero-copy">
+        <p class="hero-eyebrow font-mono text-accent fade-up" style="animation-delay:0.1s">
+          Model 01 — Limited Edition
+        </p>
+        <h1 class="hero-headline font-display fade-up" style="animation-delay:0.25s">
+          Built for the<br />people who ship.
+        </h1>
+        <p class="hero-sub fade-up" style="animation-delay:0.45s">
+          A precision mechanical keyboard designed for<br class="hidden md:inline" />
+          developers, creators and late‑night builders.
+        </p>
+        <div class="hero-ctas fade-up" style="animation-delay:0.6s">
+          <a href="#reserve" class="btn-primary">Reserve yours</a>
+          <a href="#build"   class="btn-ghost">Explore the build</a>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-hint-label font-mono">Scroll to assemble</span>
+        <div class="scroll-hint-bounce scroll-hint-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .scroll-hero-container {
+    position: relative;
+    height: 500vh;
+  }
+
+  .scroll-hero-sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #090909;
+  }
+
+  #hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-overlay-bottom {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(9,9,9,0.96) 0%, rgba(9,9,9,0.55) 30%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-overlay-top {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(9,9,9,0.75) 0%, transparent 25%);
+    pointer-events: none;
+  }
+  .hero-overlay-left {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(9,9,9,0.6) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 2rem 2rem 3.5rem;
+  }
+  @media (min-width: 768px) {
+    .hero-content { padding: 2.5rem 5vw 4rem; }
+  }
+
+  .hero-brand {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  @media (min-width: 768px) {
+    .hero-brand { top: 2.5rem; left: 5vw; }
+  }
+  .brand-logotype {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid rgba(200, 169, 110, 0.35);
+    border-radius: 2px;
+  }
+  .brand-name {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(240, 237, 232, 0.7);
+  }
+
+  .hero-copy { max-width: 680px; }
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .hero-headline {
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #f0ede8;
+    margin-bottom: 1.4rem;
+  }
+  .hero-sub {
+    font-size: clamp(0.875rem, 1.5vw, 1.05rem);
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(240, 237, 232, 0.55);
+    margin-bottom: 2.25rem;
+    max-width: 480px;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2.75rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(240, 237, 232, 0.35);
+  }
+  @media (min-width: 768px) {
+    .scroll-hint { right: 5vw; }
+  }
+  .scroll-hint-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  .scroll-hint-icon { color: rgba(200, 169, 110, 0.5); }
+</style>
+
+<script>
+  (function () {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const video     = document.getElementById('hero-video') as HTMLVideoElement | null;
+    const container = document.getElementById('hero') as HTMLElement | null;
+    if (!video || !container) return;
+
+    /* Reduced motion: loop normal */
+    if (prefersReduced) {
+      video.loop = true;
+      video.play().catch(() => {});
+      return;
+    }
+
+    /*
+     * Scroll-scrub con lerp + decode-gate.
+     *
+     * El vídeo keyboard-seekable.mp4 tiene un I-frame por cada frame (all-I),
+     * así que cada seek es O(1) sin necesidad de decodificar delta frames.
+     * El lerp suaviza el movimiento visual y el decode-gate (isSeeking +
+     * evento "seeked") evita encolar seeks mientras el decoder está ocupado.
+     */
+    const LERP   = 0.12;   // velocidad de interpolación (0.08 suave, 0.2 rápido)
+    const THRESH = 0.033;  // delta mínimo en segundos para emitir un seek (~1 frame a 30fps)
+
+    let target  = 0;
+    let current = 0;
+    let seeking = false;
+    let raf: number | null = null;
+
+    function progress(): number {
+      const rect     = container!.getBoundingClientRect();
+      const range    = container!.offsetHeight - window.innerHeight;
+      if (range <= 0) return 0;
+      return Math.min(Math.max(-rect.top / range, 0), 1);
+    }
+
+    function tick() {
+      raf = requestAnimationFrame(tick);
+
+      const dur = video!.duration;
+      if (!dur || isNaN(dur)) return;
+
+      target  = progress() * dur;
+      current = current + (target - current) * LERP;
+
+      if (seeking) return;
+      if (Math.abs(current - video!.currentTime) < THRESH) return;
+
+      seeking = true;
+      video!.currentTime = current;
+    }
+
+    video.addEventListener('seeked', () => { seeking = false; });
+
+    function boot() {
+      current = progress() * (video!.duration || 0);
+      target  = current;
+      if (raf === null) raf = requestAnimationFrame(tick);
+    }
+
+    if (video.readyState >= 1) {
+      boot();
+    } else {
+      video.addEventListener('loadedmetadata', boot, { once: true });
+    }
+  })();
+</script>

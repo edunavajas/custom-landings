@@ -1,0 +1,195 @@
+/* ─── Custom Fonts (must precede @import "tailwindcss") ─────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap");
+
+@import "tailwindcss";
+
+/* ─── CSS Custom Properties ─────────────────────────────────────────────────── */
+:root {
+  --col-bg: #090909;
+  --col-surface: #111111;
+  --col-border: rgba(255, 255, 255, 0.06);
+  --col-text: #f0ede8;
+  --col-muted: rgba(240, 237, 232, 0.45);
+  --col-accent: #c8a96e;
+  --col-accent-dim: rgba(200, 169, 110, 0.15);
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-mono: "DM Mono", "Fira Code", monospace;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--col-bg);
+  color: var(--col-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--col-bg);
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--col-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 169, 110, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 169, 110, 0.6);
+}
+
+/* ─── Selection ─────────────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(200, 169, 110, 0.25);
+  color: #f0ede8;
+}
+
+/* ─── Utility classes ────────────────────────────────────────────────────────── */
+.font-display {
+  font-family: var(--font-display);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+.text-accent {
+  color: var(--col-accent);
+}
+.text-muted {
+  color: var(--col-muted);
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--col-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Hairline separator */
+.hairline {
+  border-color: var(--col-border);
+}
+
+/* ─── Grain overlay ─────────────────────────────────────────────────────────── */
+.grain-overlay::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.028;
+  z-index: 9999;
+}
+
+/* ─── Scroll hint animation ──────────────────────────────────────────────────── */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+.scroll-hint-bounce {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+/* ─── Fade-in on scroll ─────────────────────────────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─── Reduced motion overrides ───────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint-bounce,
+  .fade-up {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ─── Feature card hover ─────────────────────────────────────────────────────── */
+.feature-card {
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+.feature-card:hover {
+  border-color: rgba(200, 169, 110, 0.25);
+  background: rgba(200, 169, 110, 0.04);
+  transform: translateY(-3px);
+}
+
+/* ─── CTA button ─────────────────────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--col-accent);
+  color: #090909;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.875rem 2rem;
+  border-radius: 2px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  color: var(--col-text);
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.875rem 2rem;
+  border-radius: 2px;
+  border: 1px solid var(--col-border);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+.btn-ghost:hover {
+  border-color: rgba(200, 169, 110, 0.4);
+  color: var(--col-accent);
+  transform: translateY(-1px);
+}
+
+/* ─── Accent line decoration ─────────────────────────────────────────────────── */
+.accent-line {
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  background: var(--col-accent);
+  opacity: 0.6;
+}
+
+/* ─── Spec row ───────────────────────────────────────────────────────────────── */
+.spec-row {
+  transition: background 0.2s ease;
+}
+.spec-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}

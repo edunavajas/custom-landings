@@ -1,0 +1,550 @@
+---
+import ScrollVideoHero from '../components/ScrollVideoHero.astro';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en" class="grain-overlay">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="KeyForge Model 01 — A precision mechanical keyboard engineered for developers, creators and late-night builders." />
+    <meta name="theme-color" content="#090909" />
+    <title>KeyForge — Built for the people who ship.</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="KeyForge — Built for the people who ship." />
+    <meta property="og:description" content="A precision mechanical keyboard engineered for developers, creators and late-night builders." />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  1. SCROLL VIDEO HERO                                          -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <ScrollVideoHero />
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  2. PRODUCT PROMISE                                            -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section id="build" class="promise-section" aria-labelledby="promise-heading">
+      <div class="section-inner">
+        <div class="promise-layout">
+          <!-- Left: label + copy -->
+          <div class="promise-copy">
+            <span class="accent-line" aria-hidden="true"></span>
+            <p class="section-eyebrow font-mono text-accent">
+              The promise
+            </p>
+            <h2 id="promise-heading" class="section-heading font-display">
+              Every keystroke.<br />
+              <em>Deliberate.</em>
+            </h2>
+          </div>
+          <!-- Right: paragraph -->
+          <div class="promise-text">
+            <p class="body-text">
+              KeyForge Model 01 is not a mass-produced peripheral. It is a
+              hand-assembled instrument built to the exacting standards of the
+              craftspeople who wield it. Each unit ships fully lubricated, foam
+              dampened, and broken in for immediate precision.
+            </p>
+            <p class="body-text" style="margin-top:1.25rem">
+              We obsess over acoustics, feel, and longevity so you can obsess
+              over the work that matters. Less friction between your mind and
+              the machine. Always.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stat strip -->
+        <div class="stat-strip" role="list">
+          {[
+            { value: "87", label: "Key layout" },
+            { value: "0.8ms", label: "Polling rate" },
+            { value: "8×", label: "PCB thickness" },
+            { value: "∞", label: "Year warranty" },
+          ].map(({ value, label }) => (
+            <div class="stat-item" role="listitem">
+              <span class="stat-value font-display">{value}</span>
+              <span class="stat-label font-mono text-muted">{label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  3. FEATURES                                                   -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section id="features" class="features-section" aria-labelledby="features-heading">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="accent-line" aria-hidden="true"></span>
+          <p class="section-eyebrow font-mono text-accent">Engineering</p>
+          <h2 id="features-heading" class="section-heading font-display">
+            Engineered to the<br />last detail.
+          </h2>
+        </div>
+
+        <div class="features-grid" role="list">
+
+          <!-- Card 1 -->
+          <article class="glass-card feature-card" role="listitem">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+              </svg>
+            </div>
+            <h3 class="feature-title font-display">Tuned Switches</h3>
+            <p class="feature-body text-muted">
+              Factory-lubed Gateron Oil Kings — linear switches chosen for
+              their buttery travel and near-silent actuation. Available in
+              45g and 67g variants. No rattles. No wobble.
+            </p>
+            <div class="feature-spec font-mono">
+              <span class="text-accent">45g / 67g</span> actuation
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="glass-card feature-card" role="listitem">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M9 21V9"/>
+              </svg>
+            </div>
+            <h3 class="feature-title font-display">CNC Aluminum Body</h3>
+            <p class="feature-body text-muted">
+              Precision-machined from a single billet of 6063-T5 aircraft
+              aluminium. A 7° typing angle, internal weight bar and
+              sound-dampening foam combine for a chassis that feels
+              indestructible and sounds expensive.
+            </p>
+            <div class="feature-spec font-mono">
+              <span class="text-accent">6063-T5</span> aerospace alloy
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="glass-card feature-card" role="listitem">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="feature-title font-display">Developer-First Layout</h3>
+            <p class="feature-body text-muted">
+              87-key TKL with a dedicated function row, true 1u modifier
+              sizing, and programmable macro layers via open-source QMK.
+              Every layer is documented. Every key is a decision.
+            </p>
+            <div class="feature-spec font-mono">
+              <span class="text-accent">QMK</span> programmable
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  4. SPECS                                                      -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section id="specs" class="specs-section" aria-labelledby="specs-heading">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="accent-line" aria-hidden="true"></span>
+          <p class="section-eyebrow font-mono text-accent">Specifications</p>
+          <h2 id="specs-heading" class="section-heading font-display">
+            The numbers.
+          </h2>
+        </div>
+
+        <div class="specs-table glass-card" role="table" aria-label="KeyForge Model 01 specifications">
+          <div role="rowgroup">
+            {[
+              ["Layout",       "87-key TKL (ANSI / ISO)"           ],
+              ["Body",         "6063-T5 CNC aluminum, anodised"     ],
+              ["Switch",       "Gateron Oil King — 45g or 67g"      ],
+              ["Keycaps",      "PBT double-shot, Cherry profile"    ],
+              ["Connection",   "USB-C detachable (6-ft braided)"    ],
+              ["Firmware",     "QMK open-source, VIA compatible"    ],
+              ["Polling rate", "1000 Hz (1 ms response)"            ],
+              ["Lighting",     "South-facing per-key RGB (optional)"],
+              ["Weight",       "≈ 1.4 kg with internal weight bar"  ],
+              ["Dimensions",   "358 × 135 × 42 mm"                  ],
+              ["Warranty",     "Lifetime on frame · 2yr on PCB"     ],
+            ].map(([label, value]) => (
+              <div class="spec-row" role="row">
+                <span class="spec-label font-mono" role="rowheader">{label}</span>
+                <span class="spec-value" role="cell">{value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  5. FINAL CTA                                                  -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section id="reserve" class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-inner">
+        <!-- Decorative glow -->
+        <div class="cta-glow" aria-hidden="true"></div>
+
+        <p class="section-eyebrow font-mono text-accent" style="margin-bottom:1.25rem">
+          Limited — 500 units worldwide
+        </p>
+        <h2 id="cta-heading" class="cta-heading font-display">
+          Your next keyboard<br />should be your last.
+        </h2>
+        <p class="cta-sub text-muted">
+          Reserve a Model 01. Ships Q3 2025.<br />
+          Free worldwide shipping. Full refund if you're not convinced.
+        </p>
+
+        <div class="cta-actions">
+          <a href="#reserve-form" class="btn-primary">Reserve yours — $499</a>
+          <a href="#specs" class="btn-ghost">View full specs</a>
+        </div>
+
+        <p class="cta-note font-mono text-muted">
+          No charge until production begins. Cancel anytime.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  FOOTER                                                        -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="font-mono text-accent" style="font-size:0.75rem; letter-spacing:0.1em">KF</span>
+          <span class="font-mono" style="font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(240,237,232,0.35)">KeyForge</span>
+        </div>
+        <p class="footer-legal font-mono text-muted">
+          © 2025 KeyForge Inc. All rights reserved.
+          &nbsp;·&nbsp; Engineered without shortcuts.
+        </p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#build" class="footer-link font-mono">Build</a>
+          <a href="#features" class="footer-link font-mono">Features</a>
+          <a href="#specs" class="footer-link font-mono">Specs</a>
+          <a href="#reserve" class="footer-link font-mono">Reserve</a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+<style>
+  /* ─── Shared section skeleton ──────────────────────────────────────────────── */
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  @media (min-width: 768px) {
+    .section-inner {
+      padding: 0 5vw;
+    }
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+  }
+  .section-header .accent-line {
+    margin-bottom: 1rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .section-heading {
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: #f0ede8;
+  }
+  .section-heading em {
+    font-style: italic;
+    color: var(--col-accent);
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(240, 237, 232, 0.6);
+  }
+
+  /* ─── Promise section ──────────────────────────────────────────────────────── */
+  .promise-section {
+    padding: 9rem 0;
+    border-top: 1px solid var(--col-border);
+  }
+  .promise-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 5rem;
+  }
+  @media (min-width: 900px) {
+    .promise-layout {
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+  }
+  .promise-copy .accent-line {
+    margin-bottom: 1rem;
+  }
+
+  /* Stat strip */
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--col-border);
+    border: 1px solid var(--col-border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  @media (min-width: 640px) {
+    .stat-strip {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .stat-item {
+    background: var(--col-bg);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .stat-value {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    color: #f0ede8;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ─── Features section ─────────────────────────────────────────────────────── */
+  .features-section {
+    padding: 9rem 0;
+    border-top: 1px solid var(--col-border);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .feature-card {
+    border-radius: 4px;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .feature-icon-wrap {
+    color: var(--col-accent);
+    opacity: 0.75;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--col-accent-dim);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .feature-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: #f0ede8;
+  }
+  .feature-body {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.75;
+    flex: 1;
+  }
+  .feature-spec {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--col-border);
+    color: rgba(240, 237, 232, 0.4);
+    text-transform: uppercase;
+  }
+
+  /* ─── Specs section ────────────────────────────────────────────────────────── */
+  .specs-section {
+    padding: 9rem 0;
+    border-top: 1px solid var(--col-border);
+  }
+  .specs-table {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .spec-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid var(--col-border);
+  }
+  .spec-row:last-child {
+    border-bottom: none;
+  }
+  @media (min-width: 768px) {
+    .spec-row {
+      grid-template-columns: 200px 1fr;
+      padding: 1.1rem 2rem;
+    }
+  }
+  .spec-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(240, 237, 232, 0.35);
+    display: flex;
+    align-items: center;
+  }
+  .spec-value {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(240, 237, 232, 0.8);
+    line-height: 1.6;
+  }
+
+  /* ─── CTA section ──────────────────────────────────────────────────────────── */
+  .cta-section {
+    padding: 10rem 0;
+    border-top: 1px solid var(--col-border);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .cta-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse at center, rgba(200, 169, 110, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .cta-heading {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: #f0ede8;
+    margin-bottom: 1.5rem;
+  }
+  .cta-sub {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+  .cta-actions {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .cta-note {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+
+  /* ─── Footer ───────────────────────────────────────────────────────────────── */
+  .site-footer {
+    border-top: 1px solid var(--col-border);
+    padding: 2.5rem 0;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .footer-inner {
+      padding: 0 5vw;
+    }
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .footer-legal {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    opacity: 0.35;
+  }
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .footer-link {
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(240, 237, 232, 0.35);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .footer-link:hover {
+    color: var(--col-accent);
+  }
+</style>
