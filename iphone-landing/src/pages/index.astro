@@ -1,0 +1,1340 @@
+---
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="iPhone 17 Pro — Impossibly powerful. Impossibly thin." />
+    <meta name="theme-color" content="#000000" />
+    <title>iPhone 17 Pro — Apple</title>
+
+    <!--
+      Apple usa SF Pro Display/Text — fuente del sistema en macOS/iOS.
+      Para web, la opración más cercana es Inter pero eso es genérico.
+      Usamos "Mona Sans" de GitHub (libre, muy cercana a SF) + fallbacks del sistema.
+      No hay Google Fonts aquí — Apple no los usa. Cargamos desde bunny.net (CDN libre).
+    -->
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css?family=mona-sans:200,300,400,500,600,700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  NAV — estilo Apple exacto                                    -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <nav class="apple-nav" id="apple-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <!-- Logo Apple SVG -->
+        <a href="#" class="nav-apple-logo" aria-label="Apple">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 814 1000" width="15" height="18" fill="currentColor">
+            <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.8 135.4-317.7 269-317.7 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49.1 190.5-49.1 30.8 0 110.9 2.6 167.7 101.3z"/>
+            <path d="M505.5 64.2c23.4-27.3 40.1-64.8 40.1-102.3 0-5.2-.5-10.5-1.5-14.7-38.4 1.5-83.8 25.5-112.2 57.1-21.5 23.4-40.8 61.1-40.8 99.1 0 5.8.9 11.6 1.3 13.5 2.4.4 6.3.9 10.2.9 34.4 0 77.9-22.9 103-53.6z"/>
+          </svg>
+        </a>
+        <div class="nav-links" role="list">
+          <a href="#features" class="nav-link" role="listitem">Features</a>
+          <a href="#camera"   class="nav-link" role="listitem">Camera</a>
+          <a href="#chip"     class="nav-link" role="listitem">A19 Pro</a>
+          <a href="#specs"    class="nav-link" role="listitem">Specs</a>
+          <a href="#buy"      class="nav-cta"  role="listitem">Buy</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  HERO SCROLL VIDEO — sticky scrub                             -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section
+      id="hero"
+      class="scroll-hero-container"
+      aria-label="iPhone 17 Pro hero — scroll to explore"
+    >
+      <div class="scroll-hero-sticky">
+
+        <video
+          id="hero-video"
+          src="/videos/iphone.mp4"
+          muted
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        ></video>
+
+        <!-- Overlay gradients — Apple style: muy sutiles -->
+        <div class="video-overlay video-overlay--top"    aria-hidden="true"></div>
+        <div class="video-overlay video-overlay--bottom" aria-hidden="true"></div>
+
+        <!-- ── Slide 0: apertura ─────────────────────────── -->
+        <div class="hero-slide" data-slide="0">
+          <div class="slide0-content">
+            <p class="hero-eyebrow">iPhone 17 Pro</p>
+            <h1 class="hero-headline">
+              Impossibly<br />powerful.
+            </h1>
+            <p class="hero-sub">
+              Meet the first iPhone built with<br />
+              ceramic-coated titanium and A19 Pro chip.
+            </p>
+          </div>
+          <div class="hero-scroll-cue" aria-hidden="true">
+            <div class="scroll-chevron">
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span>Scroll to explore</span>
+          </div>
+        </div>
+
+        <!-- ── Slide 1: Chip A19 Pro ──────────────────────── -->
+        <div class="hero-slide" data-slide="1">
+          <p class="hero-tag">A19 Pro chip</p>
+          <div class="hero-big-stat">
+            <span class="stat-n">30</span>
+            <span class="stat-unit">%<br/><span class="stat-label-inline">faster CPU</span></span>
+          </div>
+          <p class="hero-stat-desc">
+            The most advanced chip ever in a smartphone.<br />
+            Neural Engine with 38 TOPS. On-device AI at full speed.
+          </p>
+        </div>
+
+        <!-- ── Slide 2: Camera ────────────────────────────── -->
+        <div class="hero-slide" data-slide="2">
+          <p class="hero-tag">Pro camera system</p>
+          <div class="hero-big-stat">
+            <span class="stat-n">5×</span>
+            <span class="stat-unit"><br/><span class="stat-label-inline">optical zoom</span></span>
+          </div>
+          <p class="hero-stat-desc">
+            48 MP Fusion camera. 4K 120fps ProRes video.<br />
+            Studio-quality photos. From your pocket.
+          </p>
+        </div>
+
+        <!-- ── Slide 3: Titanio ───────────────────────────── -->
+        <div class="hero-slide" data-slide="3">
+          <p class="hero-tag">Ceramic-coated titanium</p>
+          <div class="hero-big-stat hero-big-stat--text">
+            <span class="stat-word">Built<br/>to last.</span>
+          </div>
+          <p class="hero-stat-desc">
+            Scratch-resistant ceramic shield front.<br />
+            Grade 5 titanium band. Lightest Pro iPhone ever.
+          </p>
+        </div>
+
+        <!-- ── Slide 4: CTA final ─────────────────────────── -->
+        <div class="hero-slide hero-slide--cta" data-slide="4">
+          <p class="hero-eyebrow">From $999</p>
+          <h2 class="hero-headline hero-headline--cta">
+            Get iPhone<br />17 Pro.
+          </h2>
+          <div class="hero-cta-actions">
+            <a href="#buy"      class="apple-btn apple-btn--primary">Buy</a>
+            <a href="#features" class="apple-btn apple-btn--ghost">Learn more ›</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  FEATURES — filas al estilo apple.com/iphone                  -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section id="features" class="features-section" aria-labelledby="features-heading">
+
+      <!-- Feature 1: Chip -->
+      <div class="feature-row feature-row--dark" id="chip">
+        <div class="feature-text">
+          <p class="feature-eyebrow">A19 Pro chip</p>
+          <h2 id="features-heading" class="feature-headline">
+            The brain<br />behind the magic.
+          </h2>
+          <p class="feature-body">
+            With the A19 Pro chip, iPhone 17 Pro delivers groundbreaking performance
+            across CPU, GPU, and Neural Engine. Every tap, every photo, every
+            on-device AI feature — impossibly fast.
+          </p>
+          <ul class="feature-bullets" aria-label="A19 Pro highlights">
+            <li>
+              <span class="bullet-stat">38 TOPS</span>
+              <span class="bullet-desc">Neural Engine performance</span>
+            </li>
+            <li>
+              <span class="bullet-stat">30%</span>
+              <span class="bullet-desc">faster CPU vs. A18 Pro</span>
+            </li>
+            <li>
+              <span class="bullet-stat">25%</span>
+              <span class="bullet-desc">GPU speedup for console-quality gaming</span>
+            </li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="chip-diagram" aria-hidden="true">
+            <div class="chip-glow"></div>
+            <div class="chip-body">
+              <div class="chip-label">A19 Pro</div>
+              <div class="chip-sub">3nm Bionic</div>
+              <div class="chip-grid">
+                {Array.from({ length: 64 }).map((_, i) => (
+                  <div class="chip-cell" style={`animation-delay:${(i * 0.04).toFixed(2)}s`}></div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Camera -->
+      <div class="feature-row feature-row--light" id="camera">
+        <div class="feature-visual feature-visual--left">
+          <div class="camera-diagram" aria-hidden="true">
+            <div class="cam-outer">
+              <div class="cam-ring cam-ring--1"></div>
+              <div class="cam-ring cam-ring--2"></div>
+              <div class="cam-ring cam-ring--3"></div>
+              <div class="cam-lens-center"></div>
+              <div class="cam-aperture-blades">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <div class="blade" style={`transform: rotate(${i * 45}deg)`}></div>
+                ))}
+              </div>
+            </div>
+            <div class="cam-spec-tag">48 MP</div>
+          </div>
+        </div>
+        <div class="feature-text feature-text--right">
+          <p class="feature-eyebrow">Pro camera system</p>
+          <h2 class="feature-headline feature-headline--dark">
+            Every photo,<br />a masterpiece.
+          </h2>
+          <p class="feature-body feature-body--dark">
+            The most powerful iPhone camera system ever. Three pro-level lenses
+            and computational photography powered by A19 Pro — so you can shoot
+            like a pro without thinking like one.
+          </p>
+          <ul class="feature-bullets feature-bullets--dark" aria-label="Camera highlights">
+            <li>
+              <span class="bullet-stat bullet-stat--dark">48 MP</span>
+              <span class="bullet-desc bullet-desc--dark">Fusion main camera</span>
+            </li>
+            <li>
+              <span class="bullet-stat bullet-stat--dark">4K 120fps</span>
+              <span class="bullet-desc bullet-desc--dark">ProRes video recording</span>
+            </li>
+            <li>
+              <span class="bullet-stat bullet-stat--dark">5×</span>
+              <span class="bullet-desc bullet-desc--dark">Tetraprism optical zoom</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 3: Design -->
+      <div class="feature-row feature-row--mid">
+        <div class="feature-text">
+          <p class="feature-eyebrow">Design</p>
+          <h2 class="feature-headline">
+            Titanium.<br />Reimagined.
+          </h2>
+          <p class="feature-body">
+            The lightest Pro iPhone ever. A new ceramic-coated finish
+            that resists scratches and smudges. Four stunning colors.
+            Designed to be held, used, and admired.
+          </p>
+          <div class="color-swatches" role="list" aria-label="Available colors">
+            <div class="swatch" style="background: #f5f2ee;" aria-label="Natural Titanium" title="Natural Titanium" role="listitem"></div>
+            <div class="swatch" style="background: #3d3a38;" aria-label="Black Titanium"   title="Black Titanium"   role="listitem"></div>
+            <div class="swatch" style="background: #e8d5bf;" aria-label="Desert Titanium"  title="Desert Titanium"  role="listitem"></div>
+            <div class="swatch" style="background: #5f7a68;" aria-label="Teal Titanium"    title="Teal Titanium"    role="listitem"></div>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="design-rings" aria-hidden="true">
+            <div class="design-ring dr-1"></div>
+            <div class="design-ring dr-2"></div>
+            <div class="design-ring dr-3"></div>
+            <div class="design-ring-text">Ceramic Shield</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  SPECS                                                         -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section id="specs" class="specs-section" aria-labelledby="specs-heading-main">
+      <div class="specs-inner">
+        <h2 id="specs-heading-main" class="specs-title">
+          iPhone 17 Pro<br />Technical specs.
+        </h2>
+
+        <div class="specs-grid">
+          {[
+            { label: "Chip",         value: "A19 Pro — 3nm Bionic" },
+            { label: "Display",      value: "6.3\" Super Retina XDR · ProMotion 1–120Hz · 2622×1206" },
+            { label: "Main camera",  value: "48 MP Fusion · ƒ/1.78 · Sensor-shift OIS" },
+            { label: "Ultra Wide",   value: "12 MP · ƒ/2.2 · 120° field of view" },
+            { label: "Telephoto",    value: "12 MP · ƒ/2.8 · 5× Tetraprism optical zoom" },
+            { label: "Video",        value: "4K 120fps ProRes · Log video · Dolby Vision" },
+            { label: "Battery",      value: "Up to 33 hours video playback · USB 3 fast charge" },
+            { label: "Storage",      value: "256 GB · 512 GB · 1 TB" },
+            { label: "Connectivity", value: "5G (sub-6 GHz + mmWave) · Wi-Fi 7 · Bluetooth 5.3 · Thread" },
+            { label: "Face ID",      value: "Face ID — secure facial recognition" },
+            { label: "Water",        value: "IP68 — 6 metres for 30 minutes" },
+            { label: "Body",         value: "Grade 5 titanium · Ceramic-coated · Ceramic Shield front" },
+            { label: "Dimensions",   value: "149.6 × 71.5 × 8.25 mm · 187 g" },
+            { label: "Colors",       value: "Natural · Black · Desert · Teal" },
+            { label: "Chip Neural",  value: "38 TOPS Neural Engine · on-device AI" },
+            { label: "In the box",   value: "iPhone 17 Pro · USB-C cable (1m) · Documentation" },
+          ].map(({ label, value }) => (
+            <div class="spec-row">
+              <span class="spec-label">{label}</span>
+              <span class="spec-value">{value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  BUY / CTA                                                     -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section id="buy" class="buy-section" aria-labelledby="buy-heading">
+      <div class="buy-inner">
+        <p class="buy-eyebrow">iPhone 17 Pro</p>
+        <h2 id="buy-heading" class="buy-headline">
+          Get yours today.
+        </h2>
+        <p class="buy-sub">
+          From $999 or $41.62/mo for 24 mo with Apple Card Monthly Installments.
+        </p>
+        <div class="buy-actions">
+          <a href="#" class="apple-btn apple-btn--primary apple-btn--large">Buy</a>
+          <a href="#" class="apple-btn apple-btn--ghost-dark apple-btn--large">Compare models ›</a>
+        </div>
+        <p class="buy-note">
+          Free shipping · 14-day return policy · AppleCare+ available
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  FOOTER — Apple style minimalista                              -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <footer class="apple-footer">
+      <div class="footer-inner">
+        <p class="footer-disclaimer">
+          <sup>1</sup> Chip performance claims based on internal testing. 
+          Battery life varies. See <a href="#">apple.com/batteries</a>. 
+          Camera specs subject to change.
+        </p>
+        <nav class="footer-nav" aria-label="Footer links">
+          <a href="#">Copyright © 2025 Apple Inc.</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Site Map</a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+<style>
+  /* ─── Reset ─────────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ─── Design tokens — Apple palette ─────────────────────────────── */
+  :root {
+    /* Superficies */
+    --black:        #000000;
+    --near-black:   #111111;
+    --dark-surface: #1d1d1f;
+    --mid-surface:  #2c2c2e;
+    --light-bg:     #f5f5f7;
+    --white:        #ffffff;
+
+    /* Tipografía oscuro */
+    --text-primary-dark:   #f5f5f7;
+    --text-secondary-dark: rgba(245,245,247,0.56);
+    --text-tertiary-dark:  rgba(245,245,247,0.30);
+
+    /* Tipografía claro */
+    --text-primary-light:   #1d1d1f;
+    --text-secondary-light: #6e6e73;
+    --text-tertiary-light:  #aeaeb2;
+
+    /* Acento */
+    --apple-blue:    #0071e3;
+    --apple-blue-hi: #0077ed;
+
+    /* Sistema */
+    --border-dark:  rgba(255,255,255,0.08);
+    --border-light: rgba(0,0,0,0.12);
+
+    /* Fuente — system stack exactamente como Apple */
+    --ff: 'Mona Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display",
+          "Helvetica Neue", Arial, sans-serif;
+  }
+
+  html {
+    font-family: var(--ff);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--black);
+    color: var(--text-primary-dark);
+    scroll-behavior: smooth;
+  }
+
+  body { overflow-x: hidden; }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     NAV — translúcido oscuro exactamente como apple.com
+  ════════════════════════════════════════════════════════════════ */
+  .apple-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    height: 44px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.3s;
+  }
+
+  .apple-nav.nav--light {
+    background: rgba(245,245,247,0.85);
+    border-color: rgba(0,0,0,0.08);
+  }
+  .apple-nav.nav--light .nav-link,
+  .apple-nav.nav--light .nav-apple-logo { color: var(--text-primary-light); }
+
+  .nav-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+  }
+
+  .nav-apple-logo {
+    color: var(--text-primary-dark);
+    display: flex;
+    align-items: center;
+    transition: opacity 0.15s;
+  }
+  .nav-apple-logo:hover { opacity: 0.7; }
+
+  .nav-links {
+    display: none;
+    align-items: center;
+    gap: 0;
+  }
+  @media (min-width: 768px) { .nav-links { display: flex; } }
+
+  .nav-link {
+    font-size: 0.73rem;
+    font-weight: 400;
+    color: var(--text-secondary-dark);
+    padding: 0 0.85rem;
+    transition: color 0.15s;
+    letter-spacing: -0.01em;
+  }
+  .nav-link:hover { color: var(--text-primary-dark); }
+
+  .nav-cta {
+    font-size: 0.73rem;
+    font-weight: 400;
+    color: var(--apple-blue);
+    padding: 0 0.85rem;
+    transition: color 0.15s;
+    letter-spacing: -0.01em;
+  }
+  .nav-cta:hover { color: var(--apple-blue-hi); }
+
+  /* ═══════════════════════════════════════════════════════════════
+     BOTONES APPLE
+  ════════════════════════════════════════════════════════════════ */
+  .apple-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 980px; /* Apple usa pill perfecto */
+    font-family: var(--ff);
+    font-size: 0.94rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    padding: 0.7rem 1.65rem;
+    transition: background 0.2s, color 0.2s, opacity 0.2s;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .apple-btn--primary {
+    background: var(--apple-blue);
+    color: #fff;
+  }
+  .apple-btn--primary:hover { background: var(--apple-blue-hi); opacity: 0.92; }
+
+  .apple-btn--ghost {
+    background: transparent;
+    color: var(--apple-blue);
+  }
+  .apple-btn--ghost:hover { text-decoration: underline; }
+
+  .apple-btn--ghost-dark {
+    background: transparent;
+    color: var(--text-primary-light);
+    opacity: 0.75;
+  }
+  .apple-btn--ghost-dark:hover { opacity: 1; text-decoration: underline; }
+
+  .apple-btn--large {
+    font-size: 1.05rem;
+    padding: 0.85rem 2.1rem;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     SCROLL VIDEO HERO
+  ════════════════════════════════════════════════════════════════ */
+  .scroll-hero-container {
+    position: relative;
+    height: 600vh; /* 5 slides */
+  }
+
+  .scroll-hero-sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--black);
+  }
+
+  #hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .video-overlay--top {
+    top: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 100%);
+  }
+  .video-overlay--bottom {
+    bottom: 0;
+    height: 55%;
+    background: linear-gradient(to top,
+      rgba(0,0,0,0.88) 0%,
+      rgba(0,0,0,0.55) 30%,
+      rgba(0,0,0,0.15) 60%,
+      transparent 100%
+    );
+  }
+
+  /* ── Slides ─────────────────────────────────────────────────── */
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 1.5rem 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+  }
+  .hero-slide.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .hero-slide.is-exiting {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+
+  /* ── Slide 0: layout anclado abajo-centro ─────────────────── */
+  .hero-slide[data-slide="0"] {
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    padding-bottom: 5rem;
+    padding-left: clamp(2rem, 6vw, 7rem);
+  }
+
+  .slide0-content {
+    position: relative;
+    z-index: 3;
+    max-width: 600px;
+  }
+
+  /* text-shadow fuerte para que el headline siempre contraste */
+  .hero-slide[data-slide="0"] .hero-headline {
+    text-shadow:
+      0 2px 40px rgba(0,0,0,0.9),
+      0 1px 4px rgba(0,0,0,0.8);
+  }
+  .hero-slide[data-slide="0"] .hero-eyebrow {
+    text-shadow: 0 1px 8px rgba(0,0,0,0.9);
+  }
+  .hero-slide[data-slide="0"] .hero-sub {
+    text-shadow: 0 1px 12px rgba(0,0,0,0.95);
+  }
+
+  .hero-eyebrow {
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    font-weight: 400;
+    color: var(--text-secondary-dark);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+  }
+  .hero-headline {
+    font-size: clamp(3.8rem, 8.5vw, 9rem);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    color: var(--white);
+    margin-bottom: 1.1rem;
+  }
+  .hero-headline--cta {
+    font-size: clamp(3rem, 6.5vw, 7rem);
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  .hero-sub {
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--text-secondary-dark);
+    letter-spacing: -0.01em;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-scroll-cue {
+    position: absolute;
+    bottom: 2.5rem;
+    left: clamp(2rem, 6vw, 7rem); /* alineado con el texto del slide 0 */
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-tertiary-dark);
+  }
+  .scroll-chevron {
+    animation: bounce-down 1.8s ease-in-out infinite;
+  }
+  @keyframes bounce-down {
+    0%, 100% { transform: translateY(0); opacity: 0.3; }
+    50%       { transform: translateY(4px); opacity: 0.8; }
+  }
+  .hero-scroll-cue span {
+    font-size: 0.62rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* slides 1–3: big stat */
+  .hero-tag {
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    font-weight: 500;
+    color: var(--text-secondary-dark);
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-big-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+  }
+  .hero-big-stat--text {
+    align-items: center;
+  }
+
+  .stat-n {
+    font-size: clamp(7rem, 16vw, 15rem);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.05em;
+    line-height: 0.9;
+  }
+  .stat-unit {
+    font-size: clamp(1.4rem, 2.5vw, 2.5rem);
+    font-weight: 300;
+    color: var(--text-secondary-dark);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    text-align: left;
+  }
+  .stat-label-inline {
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    font-weight: 400;
+    color: var(--text-secondary-dark);
+    display: block;
+    letter-spacing: 0;
+  }
+  .stat-word {
+    font-size: clamp(4rem, 9vw, 10rem);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .hero-stat-desc {
+    font-size: clamp(0.95rem, 1.2vw, 1.2rem);
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--text-secondary-dark);
+    max-width: 500px;
+    letter-spacing: -0.01em;
+  }
+
+  /* slide 4 CTA */
+  .hero-cta-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     FEATURES — filas alternadas
+  ════════════════════════════════════════════════════════════════ */
+  .feature-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .feature-row { grid-template-columns: 1fr 1fr; }
+  }
+
+  .feature-row--dark  { background: var(--near-black); }
+  .feature-row--light { background: var(--light-bg); }
+  .feature-row--mid   { background: var(--dark-surface); }
+
+  .feature-text {
+    padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 6vw, 7rem);
+    order: 1;
+  }
+  .feature-text--right { order: 2; }
+
+  @media (min-width: 900px) {
+    .feature-text--right { order: 2; }
+  }
+
+  .feature-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    order: 2;
+  }
+  .feature-visual--left { order: 1; }
+
+  @media (min-width: 900px) {
+    .feature-visual--left { order: 1; }
+    .feature-text { order: 2; }
+    .feature-row--light .feature-text--right { order: 2; }
+    .feature-row--light .feature-visual--left { order: 1; }
+  }
+
+  .feature-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--apple-blue);
+    margin-bottom: 1rem;
+  }
+
+  .feature-headline {
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: -0.03em;
+    color: var(--text-primary-dark);
+    margin-bottom: 1.5rem;
+  }
+  .feature-headline--dark { color: var(--text-primary-light); }
+
+  .feature-body {
+    font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--text-secondary-dark);
+    letter-spacing: -0.01em;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+  }
+  .feature-body--dark { color: var(--text-secondary-light); }
+
+  .feature-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .feature-bullets li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(255,255,255,0.12);
+  }
+  .feature-bullets--dark li {
+    border-left-color: rgba(0,0,0,0.12);
+  }
+
+  .bullet-stat {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--text-primary-dark);
+    line-height: 1;
+  }
+  .bullet-stat--dark { color: var(--text-primary-light); }
+
+  .bullet-desc {
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--text-secondary-dark);
+    letter-spacing: -0.01em;
+  }
+  .bullet-desc--dark { color: var(--text-secondary-light); }
+
+  /* Color swatches */
+  .color-swatches {
+    display: flex;
+    gap: 0.85rem;
+    margin-top: 2.5rem;
+  }
+  .swatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.2);
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+  .swatch:hover {
+    box-shadow: 0 0 0 3px var(--apple-blue);
+    transform: scale(1.12);
+  }
+
+  /* ── Chip diagram ─────────────────────────────────────────── */
+  .chip-diagram {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chip-glow {
+    position: absolute;
+    inset: -40px;
+    background: radial-gradient(ellipse, rgba(0,113,227,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .chip-body {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #2c2c2e 0%, #1c1c1e 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    box-shadow:
+      0 0 0 1px rgba(0,113,227,0.15),
+      0 20px 60px rgba(0,0,0,0.6),
+      inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+  .chip-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.03em;
+  }
+  .chip-sub {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: var(--text-secondary-dark);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .chip-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 3px;
+    padding: 12px;
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    overflow: hidden;
+    opacity: 0.15;
+  }
+  .chip-cell {
+    background: var(--apple-blue);
+    border-radius: 1px;
+    animation: chip-pulse 3s ease-in-out infinite;
+  }
+  @keyframes chip-pulse {
+    0%, 100% { opacity: 0.2; }
+    50%       { opacity: 0.9; }
+  }
+
+  /* ── Camera diagram ───────────────────────────────────────── */
+  .camera-diagram {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cam-outer {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cam-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.12);
+  }
+  .cam-ring--1 { width: 220px; height: 220px; background: #e0e0e5; }
+  .cam-ring--2 { width: 170px; height: 170px; background: #c8c8cc; border-color: rgba(0,0,0,0.15); }
+  .cam-ring--3 { width: 110px; height: 110px; background: #1d1d1f; border-color: rgba(0,0,0,0.3); }
+  .cam-lens-center {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at 35% 35%, #3a5c8a 0%, #0a1628 60%, #000 100%);
+    box-shadow:
+      0 0 0 4px rgba(255,255,255,0.04),
+      inset 0 2px 8px rgba(255,255,255,0.15);
+    z-index: 2;
+  }
+  .cam-aperture-blades {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    animation: aperture-spin 20s linear infinite;
+  }
+  @keyframes aperture-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  .blade {
+    position: absolute;
+    width: 30px;
+    height: 6px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 3px;
+    transform-origin: 0 50%;
+    left: 50%;
+    top: calc(50% - 3px);
+    opacity: 0.6;
+  }
+  .cam-spec-tag {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background: var(--apple-blue);
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+  }
+
+  /* ── Design rings ─────────────────────────────────────────── */
+  .design-rings {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .design-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.08);
+    animation: ring-pulse 4s ease-in-out infinite;
+  }
+  .dr-1 { width: 320px; height: 320px; animation-delay: 0s; }
+  .dr-2 { width: 220px; height: 220px; animation-delay: 0.7s; border-color: rgba(255,255,255,0.12); }
+  .dr-3 {
+    width: 120px;
+    height: 120px;
+    animation-delay: 1.4s;
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.2);
+  }
+  @keyframes ring-pulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50%       { opacity: 0.8; transform: scale(1.02); }
+  }
+  .design-ring-text {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary-dark);
+    position: absolute;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     SPECS
+  ════════════════════════════════════════════════════════════════ */
+  .specs-section {
+    background: var(--light-bg);
+    padding: 8rem 0;
+  }
+  .specs-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 22px;
+  }
+  .specs-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-primary-light);
+    line-height: 1.06;
+    margin-bottom: 3.5rem;
+  }
+  .specs-grid {
+    border-top: 1px solid var(--border-light);
+  }
+  .spec-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-light);
+    gap: 1rem;
+    align-items: start;
+    transition: background 0.15s;
+  }
+  .spec-row:hover {
+    background: rgba(0,0,0,0.02);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 6px;
+    margin: 0 -0.5rem;
+  }
+  @media (max-width: 600px) {
+    .spec-row { grid-template-columns: 1fr; gap: 0.25rem; }
+  }
+  .spec-label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-secondary-light);
+    letter-spacing: -0.01em;
+    padding-top: 0.1rem;
+  }
+  .spec-value {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--text-primary-light);
+    line-height: 1.55;
+    letter-spacing: -0.01em;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUY / CTA
+  ════════════════════════════════════════════════════════════════ */
+  .buy-section {
+    background: var(--dark-surface);
+    padding: 10rem 0;
+    text-align: center;
+  }
+  .buy-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .buy-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--apple-blue);
+    margin-bottom: 1rem;
+  }
+  .buy-headline {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--text-primary-dark);
+    line-height: 1.04;
+    margin-bottom: 1.25rem;
+  }
+  .buy-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-secondary-dark);
+    line-height: 1.55;
+    letter-spacing: -0.01em;
+    margin-bottom: 2.5rem;
+    max-width: 460px;
+  }
+  .buy-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.75rem;
+  }
+  .buy-note {
+    font-size: 0.75rem;
+    color: var(--text-tertiary-dark);
+    letter-spacing: -0.01em;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     FOOTER
+  ════════════════════════════════════════════════════════════════ */
+  .apple-footer {
+    background: #f5f5f7;
+    border-top: 1px solid var(--border-light);
+    padding: 2.25rem 0;
+  }
+  .footer-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 22px;
+  }
+  .footer-disclaimer {
+    font-size: 0.73rem;
+    color: var(--text-tertiary-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+  .footer-disclaimer a {
+    color: var(--apple-blue);
+  }
+  .footer-disclaimer a:hover { text-decoration: underline; }
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+  }
+  .footer-nav a {
+    font-size: 0.73rem;
+    color: var(--text-secondary-light);
+    letter-spacing: -0.01em;
+    transition: color 0.15s;
+  }
+  .footer-nav a:hover { color: var(--apple-blue); }
+
+  /* ═══════════════════════════════════════════════════════════════
+     RESPONSIVE — mobile nav simplificada
+  ════════════════════════════════════════════════════════════════ */
+  @media (max-width: 767px) {
+    .feature-row { min-height: auto; }
+    .feature-text,
+    .feature-text--right { order: 1; padding: 3rem 1.5rem; }
+    .feature-visual,
+    .feature-visual--left { order: 2; padding: 2rem 1.5rem; }
+  }
+</style>
+
+<script>
+  (function () {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const video     = document.getElementById('hero-video') as HTMLVideoElement | null;
+    const container = document.getElementById('hero') as HTMLElement | null;
+    if (!video || !container) return;
+
+    const slides = Array.from(
+      container.querySelectorAll<HTMLElement>('.hero-slide')
+    );
+
+    /* ── Reduced motion: sólo slide 0 visible ─────────────────── */
+    if (prefersReduced) {
+      video.loop = true;
+      video.play().catch(() => {});
+      slides[0]?.classList.add('is-visible');
+      return;
+    }
+
+    /* ─────────────────────────────────────────────────────────────
+       SCROLL SCRUB — lerp adaptativo + decode-gate
+       (mismo patrón probado en camera y keyforge landing)
+    ───────────────────────────────────────────────────────────── */
+    const THRESH = 0.025;
+
+    let target  = 0;
+    let current = 0;
+    let seeking = false;
+    let raf: number | null = null;
+
+    /*
+      5 slides distribuidos en el rango 0–1 de scroll:
+      Slide 0 (apertura):   0.00 – 0.14
+      Slide 1 (chip):       0.19 – 0.38
+      Slide 2 (camera):     0.44 – 0.60
+      Slide 3 (titanio):    0.66 – 0.80
+      Slide 4 (CTA):        0.87 – 1.00
+    */
+    const SLIDE_RANGES: [number, number][] = [
+      [0.00, 0.14],
+      [0.19, 0.38],
+      [0.44, 0.60],
+      [0.66, 0.80],
+      [0.87, 1.00],
+    ];
+
+    let activeSlide = -1;
+
+    function progress(): number {
+      const rect  = container!.getBoundingClientRect();
+      const range = container!.offsetHeight - window.innerHeight;
+      if (range <= 0) return 0;
+      return Math.min(Math.max(-rect.top / range, 0), 1);
+    }
+
+    function updateSlides(p: number) {
+      let next = -1;
+      for (let i = 0; i < SLIDE_RANGES.length; i++) {
+        const [start, end] = SLIDE_RANGES[i];
+        if (p >= start && p <= end) { next = i; break; }
+      }
+
+      if (next === activeSlide) return;
+
+      if (activeSlide >= 0 && slides[activeSlide]) {
+        const prev = slides[activeSlide];
+        prev.classList.remove('is-visible');
+        if (next > activeSlide) {
+          prev.classList.add('is-exiting');
+          setTimeout(() => prev.classList.remove('is-exiting'), 500);
+        }
+      }
+
+      if (next >= 0 && slides[next]) {
+        slides[next].classList.remove('is-exiting');
+        requestAnimationFrame(() => {
+          slides[next]?.classList.add('is-visible');
+        });
+      }
+
+      activeSlide = next;
+    }
+
+    function tick() {
+      raf = requestAnimationFrame(tick);
+
+      const dur = video!.duration;
+      if (!dur || isNaN(dur)) return;
+
+      const p = progress();
+
+      target  = p * dur;
+      const delta = Math.abs(target - current);
+      const lerp  = delta > 1.5 ? 0.30 : delta > 0.4 ? 0.18 : 0.10;
+      current = current + (target - current) * lerp;
+
+      if (!seeking && Math.abs(current - video!.currentTime) >= THRESH) {
+        seeking = true;
+        video!.currentTime = current;
+      }
+
+      updateSlides(p);
+    }
+
+    video.addEventListener('seeked', () => { seeking = false; });
+
+    function boot() {
+      current = progress() * (video!.duration || 0);
+      target  = current;
+      updateSlides(progress());
+      if (raf === null) raf = requestAnimationFrame(tick);
+    }
+
+    if (video.readyState >= 1) {
+      boot();
+    } else {
+      video.addEventListener('loadedmetadata', boot, { once: true });
+    }
+
+    /* ── Nav: cambiar a modo claro cuando llegamos a features ─── */
+    const nav      = document.getElementById('apple-nav');
+    const features = document.getElementById('features');
+
+    if (nav && features) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          nav.classList.toggle('nav--light', entry.isIntersecting);
+        },
+        { rootMargin: '-44px 0px 0px 0px', threshold: 0 }
+      );
+      observer.observe(features);
+    }
+  })();
+</script>
